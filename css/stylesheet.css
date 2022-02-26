@@ -436,7 +436,7 @@ header nav ul li a span:hover{
     /* left: 557px; */
     top: 51px;
     left: 35%;
-    background-color: #fff;
+    background-color: #dee2e6;
     z-index: 9999;
     position: fixed;
     display: flex;
@@ -450,11 +450,16 @@ header nav ul li a span:hover{
     border: 3px solid #671818;
     border-radius: 40px;
     transition: 2.9s;
+    font-weight
+}
+.popup.active h2{
+    font-w
 }
 .popup h3{
     color: black;
     font-size: 17px;
     margin: 9px;
+    font-weight: 500;
 }
 .close{
     color: red;
