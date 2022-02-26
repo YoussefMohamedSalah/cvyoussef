@@ -1320,6 +1320,9 @@ span{
         }
 }
 @media (max-width:576px){
+    .soft-skills-container{
+        padding: 0px;
+    }
     .profilePic{
         display: none;
     }
@@ -1371,6 +1374,9 @@ span{
 }
 
 @media (max-width: 450px){
+    .soft-skills-container{
+        padding: 0px;
+    }
     .profilePic{
         display: none;
     }
@@ -1399,6 +1405,9 @@ span{
     }
 }
 @media (max-width: 420px){
+    .soft-skills-container{
+        padding: 0px;
+    }
     .profilePic{
         display: none;
     }
@@ -1424,6 +1433,9 @@ span{
     }
 }
 @media (max-width: 350px){
+    .soft-skills-container{
+        padding: 0px;
+    }
     .profilePic{
         display: none;
     }
