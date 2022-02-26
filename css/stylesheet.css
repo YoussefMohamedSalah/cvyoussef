@@ -1240,6 +1240,9 @@ span{
     }
 }
 @media (max-width: 768px){
+    .profilePic{
+        display: none;
+    }
     header nav ul{
         display: none;
     }
@@ -1317,6 +1320,9 @@ span{
         }
 }
 @media (max-width:576px){
+    .profilePic{
+        display: none;
+    }
     section{
         padding: 0px;
     }
@@ -1365,6 +1371,9 @@ span{
 }
 
 @media (max-width: 450px){
+    .profilePic{
+        display: none;
+    }
     .avatar img {
         width: 250px;
     }
@@ -1390,6 +1399,9 @@ span{
     }
 }
 @media (max-width: 420px){
+    .profilePic{
+        display: none;
+    }
     #typeWrite{
         font-size: 18px;
     }
@@ -1412,6 +1424,9 @@ span{
     }
 }
 @media (max-width: 350px){
+    .profilePic{
+        display: none;
+    }
     #typeWriter {
         font-size: 20px;
     }
