@@ -1359,6 +1359,9 @@ span{
         top: 6px;
         right: 17px;
     }
+    .aboutMe{
+        padding-right: 0px;
+    }
 }
 
 @media (max-width: 450px){
