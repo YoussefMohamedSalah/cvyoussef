@@ -1576,7 +1576,10 @@ span {
   padding: 30px 0px 30px 0px;;
 }
 .magic_card {
-  background: #191c29;
+  /* background: #191c29; */
+  /* background-image: url(/assets/leapAcademy.webp);
+  background-size:cover;
+  background-repeat: no-repeat; */
   width: var(--card-width);
   height: var(--card-height);
   padding: 3px;
@@ -1591,6 +1594,16 @@ span {
   cursor: pointer;
   font-family: cursive;
 }
+.magic_card img{
+  object-fit: contain;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .magic_card:hover {
   color: rgb(88 199 250 / 100%);
   transition: color 1s;
