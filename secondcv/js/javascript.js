@@ -109,6 +109,16 @@ for (i = 0; i < radios.length; i++) {
         html[0].classList.add(this.id);
     });
 }
+// -------------------------------------
+const themeMenu = document.getElementById('theme_menu');
+const toggleThemeMenu = document.getElementsByClassName('toggle_theme_menu');
+const closeBtn = document.getElementById('close_btn');
+const openBtn = document.getElementById('open_btn');
+
+closeBtn.addEventListener('click', function () {
+    themeMenu.classList.toggle('activated');
+});
+
 // --------------------
 // Slider(all Slides in a container)
 const slider = document.querySelector(".slider")

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 /* ----------------------------------Root for dark and light theme----------------------------------- */
 body {
     background-color: var(--c-bg-primary);
@@ -21,6 +22,9 @@ body {
 
 */
 :root {
+  --card-height: 65vh;
+  --card-width: calc(var(--card-height) / 1.5);
+  /* -------------------------------------- */
     --c-text-primary: #edeeef;
     --c-text-secondary: #d4d7e1;
     --c-border-primary: #323232;
@@ -104,12 +108,15 @@ header .container {
   transition: box-shadow 0.2s;
   cursor: pointer;
   overflow: hidden;
+  /* width: 50px;
+  height: 50px;
+  background-color: rgb(37, 211, 102); */
 }
 
 .venom-button .venom-button-button img,
 .venom-button .venom-button-button svg {
   position: absolute;
-  width: 100%;
+  width: 85%;
   height: auto;
   object-fit: cover;
   top: 50%;
@@ -118,9 +125,9 @@ header .container {
   border-radius: 50%;
 }
 
-.venom-button:hover {
+/* .venom-button:hover {
   bottom: 35px;
-}
+} */
 
 .venom-button:hover .venom-button-button {
   box-shadow: 1px 2px 8px rgba(60, 60, 60, 0.4);
@@ -210,13 +217,14 @@ header .container {
 /* to top button */
 .to_top {
   position: fixed;
+  display: flex;
   bottom: -100px;
+  align-items: center;
   justify-content: center;
   right: 50%;
   background-color: transparent;
   color: var(--c-text-primary);
   font-weight: bold;
-  font-size: 22px;
   z-index: 100;
   padding: 10px;
   border-radius: 4px;
@@ -226,7 +234,11 @@ header .container {
 }
 .to_top.show {
   bottom: 10px;
-  background: var(--to-top-color);
+  background: var(--c-border-primary);
+  width: 45px;
+}
+.to_top.show:hover{
+  color: var(--color-green);
 }
 .content {
   display: flex;
@@ -300,7 +312,6 @@ header nav ul li a span:hover {
 } */
 .my_name {
   padding-top: 22px;
-  color: var(--color-green);
 }
 #typeWriter {
   font-size: 25px;
@@ -346,68 +357,6 @@ header nav ul li a span:hover {
   display: flex;
   justify-content: center;
 }
-/* .tobe {
-    transform: scale(0.1);
-}
-.tobe.active{
-    animation: blink-animation 2.5s steps(5, start) infinite;
-    animation: blink 1.7 infinite;
-    right: 0px;
-    left: 331px;
-    font-weight: 500;
-    color: var(--color-green);
-    font-size: 25px;
-    transition: 2.9s;
-    transform: scale(1.3);
-} */
-
-/* ------------------------------------- */
-/* .popup{
-    top: 51px;
-    left: 35%;
-    background-color: #fff;
-    z-index: 9999;
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    top: -236px;
-    overflow: hidden;
-    margin: 0 auto;
-    border: 3px solid #671818;
-    border-radius: 40px;
-} */
-/* .popup.active{
-    top: 51px;
-    left: 35%;
-    background-color: #dee2e6;
-    z-index: 9999;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 415px;
-    height: 199px;
-    overflow: hidden;
-    margin: 0 auto;
-    border: 3px solid #671818;
-    border-radius: 40px;
-    transition: 2.9s;
-}
-.popup h3{
-    color: black;
-    font-size: 17px;
-    margin: 9px;
-    font-weight: 500;
-}
-.close{
-    color: red;
-    position: absolute;
-    top: 8px;
-    right: 20px;
-    font-size: 22px;
-    cursor: pointer;
-} */
 /* ------------------------------------- */
 .contacts {
   text-align: start;
@@ -511,15 +460,19 @@ section {
 .PortfolioPicSubContainer {
   padding-right: 70px;
 }
+/* -------------importatnt -------------------*/
+.changble_color_text{
+  color: var(--color-green);
+}
+/* -------------importatnt -------------------*/
 h1 {
   font-weight: 700;
-  color: var(--c-text-primary);
   margin: 0 0 15px;
   line-height: 1.4;
 }
 h3 {
   font-weight: 700;
-  color: var(--c-text-primary);
+  /* color: var(--c-text-primary); */
   margin: 0 0 15px;
   line-height: 1.4;
 }
@@ -624,7 +577,7 @@ div {
   padding: 0.5em;
   height: 3em;
   border-radius: 1em;
-  background-color: var(--card-color);
+  background-color: var(--c-border-primary);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -643,6 +596,8 @@ div {
 .progressSkills {
   margin: 1rem 0 4rem;
   padding-bottom: 40px;
+  display: flex;
+  flex-direction: row;
 }
 .personal-skills ul {
   padding: 0;
@@ -667,8 +622,10 @@ div {
 .infoGrid {
   margin: 0;
   box-sizing: border-box;
-  padding-top: 20px;
+  padding: 0px 20px 0px 30px;
+  width: 50%;
   /* color: var(--my-info-color); */
+  /* padding-right: 100px; */
 }
 .personalInfo.info {
   margin-left: 56px;
@@ -686,11 +643,11 @@ h6 {
   margin-top: 50px;
   padding-top: 3rem;
 }
-/* .recent-work h1{
-    color: var(--c-text-primary);
-} */
-.feature-projects {
+.projects_container {
   text-align: left;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 .featuredporjects {
   padding-bottom: 2rem;
@@ -700,12 +657,6 @@ h6 {
   flex-wrap: wrap;
   justify-content: center;
 }
-/* #linewhite{
-    border-bottom: 1px solid var(--my-info-color);
-    padding-bottom: 2rem;
-    display: flex;
-    flex-direction: row;
-} */
 .MuiGrid {
   display: flex;
   flex-wrap: wrap;
@@ -1034,10 +985,6 @@ span {
   background-color: crimson;
   transition: 2s linear;
 }
-/* .skillsUses h6{
-    font-size: 16px;
-    color: darkseagreen;
-} */
 /* -------------------------------------------- */
 .single-project .technologies .MuiChip-root {
   background-color: #009fde;
@@ -1200,40 +1147,9 @@ span {
   .myinfo2 {
     flex-wrap: wrap;
   }
-  /* .sidenav {
-    background-color: rgba(90, 92, 105, 0.9);
-  } */
-  /* .sidenav.active {
-    width: 190px;
-  } */
-  /* .edit-btn.active {
-    left: 190px;
-  } */
-  /* .sidenav a {
-    padding: 6px 0px 6px 9px;
-  } */
   .row-2 {
     display: unset;
   }
-  /* #typeWriter {
-    font-size: 20px;
-  } */
-  /* .tobe.active{
-        font-size: 20px;
-    } */
-  /* .popup.active {
-    left: 25%;
-    width: 370px;
-    height: 190px;
-  } */
-  /* .popup h3 {
-    font-size: 14px;
-    margin: 10px;
-  } */
-  /* .close {
-    top: 6px;
-    right: 17px;
-  } */
 }
 @media (max-width: 1200px) {
   .summaryImg {
@@ -1422,9 +1338,6 @@ span {
     height: 139px;
     font-size: 8px;
   }
-  /* .tobe.active{
-        font-size: 18px;
-    } */
   .popup h3 {
     font-size: 12px;
     margin: 8px;
@@ -1437,22 +1350,6 @@ span {
     right: 13px;
   }
 }
-/* dropdown menu */
-
-/* Dropdown Button */
-/* .dropbtn {
-    background-color: #3498DB;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  } */
-
-/* Dropdown button on hover & focus */
-/* .dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
-  } */
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
@@ -1514,18 +1411,42 @@ span {
         border-color: transparent;
     }
 }
-.menu {
+#theme_menu {
     width: 90%;
     position: fixed;
-    bottom: 0px;
     right: 100px;
     max-width: 320px;
     background-color: var(--c-bg-primary);
-    /* background-color: #323339; */
-    transition: background-color 0.15s ease;
+    /* transition: background-color 0.15s ease; */
     border-radius: 10px 10px 0 0;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.05), 0 -4px 16px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
+    z-index: 9000;
+}
+.menu{
+  bottom: -148px;
+  transition: 2s;
+}
+.menu.activated{
+  bottom: 0px;
+  transition: 0.7s;
+}
+/* open and close theme menu  */
+/* .menu_activated{
+  display: block;
+}
+.menu_activated{
+  display: none;
+} */
+
+#menu-top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#menu-top span a{
+  cursor: pointer;
+  color: var(--color-green);
+  top:3px;
 }
 .menu-header {
     padding: 1rem;
@@ -1635,301 +1556,87 @@ span {
       padding: 0;
     }
   }
-  .slider-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 5rem;
-    padding-top: 50px;
+  /* -------------- */
+/* new card idea for presentation my recent works */
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+.cards_container {
+  /* min-height: 100vh; */
+  /* background: #212534; */
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 60px 0px 70px 0px;
+}
+.magic_card {
+  background: #191c29;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 1.5em;
+  color: rgb(88 199 250 / 0%);
+  cursor: pointer;
+  font-family: cursive;
+}
+.magic_card:hover {
+  color: rgb(88 199 250 / 100%);
+  transition: color 1s;
+}
+.magic_card:hover:before, .card:hover:after {
+  animation: none;
+  opacity: 0;
+}
+.magic_card::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+  var(--rotate)
+  , #5ddcff, #3c67e3 43%, #4e00c2);
+  position: absolute;
+  z-index: -1;
+  top: -1%;
+  left: -2%;
+  animation: spin 2.5s linear infinite;
+}
+
+.magic_card::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+  var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+  opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+      --rotate: 0deg;
   }
-  @media only screen and (max-width: 1000px) {
-    .slider-container {
-      border-radius: 0;
-    }
+  100% {
+      --rotate: 360deg;
   }
-  .slider {
-    display: flex;
-    width: 510%;
-    height: 55rem;
-    transition: all 0.25s ease-in;
-    transform: translateX(0);
-  }
-  @media only screen and (max-width: 1000px) {
-    .slider {
-      height: 100vh;
-    }
-  }
-  .slider .box {
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-  }
-  @media only screen and (max-width: 650px) {
-    .slider .box {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(2, 1fr);
-    }
-  }
-  .slider .box .bg {
-    padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.2);
-    width: 55%;
-    transform: skewX(7deg);
-    position: absolute;
-    height: 100%;
-    left: -10%;
-    padding-left: 20rem;
-    transform-origin: 0 100%;
-  }
-  @media only screen and (max-width: 800px) {
-    .slider .box .bg {
-      width: 65%;
-    }
-  }
-  @media only screen and (max-width: 650px) {
-    .slider .box .bg {
-      width: 100%;
-      left: 0;
-      bottom: 0;
-      height: 54%;
-      transform: skewX(0deg);
-    }
-  }
-  .slider .box .bg::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: inherit;
-    pointer-events: none;
-    transform: skewX(10deg);
-  }
-  @media only screen and (max-width: 650px) {
-    .slider .box .bg::before {
-      width: 120%;
-      bottom: 0;
-      transform: skewX(0deg);
-    }
-  }
-  .slider .box .details {
-    padding: 5rem;
-    padding-left: 10rem;
-    z-index: 100;
-    grid-column: 1 / span 1;
-    grid-row: 1 / -1;
-  }
-  @media only screen and (max-width: 650px) {
-    .slider .box .details {
-      grid-row: 2 / span 1;
-      grid-column: 1 / -1;
-      text-align: center;
-      padding: 2rem;
-      transform: translateY(-9rem);
-    }
-  }
-  .slider .box .details h1 {
-    font-size: 3.5rem;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-  }
-  .slider .box .details p {
-    display: inline-block;
-    font-size: 1.3rem;
-    color: #B5B4B4;
-    margin-bottom: 2rem;
-    margin-right: 5rem;
-  }
-  @media only screen and (max-width: 800px) {
-    .slider .box .details p {
-      margin-right: 0;
-    }
-  }
-  .slider .box .details button {
-    padding: 1rem 3rem;
-    color: #fff;
-    border-radius: 2rem;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  .slider .box .details button:hover {
-    opacity: 0.8;
-  }
-  .slider .box .details button:focus {
-    outline: none;
-    border: none;
-  }
-  .slider .box1 {
-    background-color: #500033;
-  }
-  .slider .box1 .illustration .inner {
-    background-color: #FF0077;
-  }
-  .slider .box1 .illustration .inner::after, .slider .box1 .illustration .inner::before {
-    background-color: rgba(255, 0, 119, 0.4);
-  }
-  .slider .box1 button {
-    background-color: #FF0077;
-  }
-  .slider .box2 {
-    background-color: #000050;
-  }
-  .slider .box2 .illustration .inner {
-    background-color: #0033FF;
-  }
-  .slider .box2 .illustration .inner::after, .slider .box2 .illustration .inner::before {
-    background-color: rgba(0, 51, 255, 0.4);
-  }
-  .slider .box2 button {
-    background-color: #0033FF;
-  }
-  .slider .box3 {
-    background-color: #00501D;
-  }
-  .slider .box3 .illustration .inner {
-    background-color: #00FF44;
-  }
-  .slider .box3 .illustration .inner::after, .slider .box3 .illustration .inner::before {
-    background-color: rgba(0, 255, 68, 0.4);
-  }
-  .slider .box3 button {
-    background-color: #00FF44;
-  }
-  .slider .box4 {
-    background-color: #554D00;
-  }
-  .slider .box4 .illustration .inner {
-    background-color: #FF4E00;
-  }
-  .slider .box4 .illustration .inner::after, .slider .box4 .illustration .inner::before {
-    background-color: rgba(255, 78, 0, 0.4);
-  }
-  .slider .box4 button {
-    background-color: #FF4E00;
-  }
-  .slider .box5 {
-    background-color: #300050;
-  }
-  .slider .box5 .illustration .inner {
-    background-color: #8000FF;
-  }
-  .slider .box5 .illustration .inner::after, .slider .box5 .illustration .inner::before {
-    background-color: rgba(128, 0, 255, 0.4);
-  }
-  .slider .box5 button {
-    background-color: #8000FF;
-  }
-  .slider .illustration {
-    grid-column: 2 / -1;
-    grid-row: 1 / -1;
-    justify-self: center;
-  }
-  @media only screen and (max-width: 650px) {
-    .slider .illustration {
-      grid-row: 1 / span 1;
-      grid-column: 1 / -1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-  .slider .illustration div {
-    height: 25rem;
-    width: 18rem;
-    border-radius: 3rem;
-    background-color: #FF0077;
-    position: relative;
-    transform: skewX(-10deg);
-  }
-  @media only screen and (max-width: 800px) {
-    .slider .illustration div {
-      height: 20rem;
-      width: 15rem;
-    }
-  }
-  .slider .illustration div::after, .slider .illustration div::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    border-radius: 3rem;
-    top: 0;
-    left: 0;
-  }
-  .slider .illustration div::after {
-    transform: translate(4rem, -1rem);
-  }
-  .slider .illustration div::before {
-    transform: translate(2rem, -2rem);
-  }
-  .prev, .next, .trail {
-    z-index: 10000;
-    position: absolute;
-  }
-  .prev, .next {
-    width: 4rem;
-    cursor: pointer;
-    opacity: 0.2;
-    transition: all 0.3s ease;
-  }
-  @media only screen and (max-width: 650px) {
-    .prev, .next {
-      display: none;
-    }
-  }
-  .prev:hover, .next:hover {
-    opacity: 1;
-  }
-  .prev {
-    top: 50%;
-    left: 2%;
-    transform: translateY(-50%);
-  }
-  .next {
-    top: 50%;
-    right: 2%;
-    transform: translateY(-50%);
-  }
-  .trail {
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
-    text-align: center;
-    font-size: 1.5rem;
-  }
-  @media only screen and (max-width: 650px) {
-    .trail {
-      width: 90%;
-      bottom: 13%;
-    }
-  }
-  .trail div {
-    padding: 2rem;
-    border-top: 3px solid #fff;
-    cursor: pointer;
-    opacity: 0.3;
-    transition: all 0.3s ease;
-  }
-  .trail div:hover {
-    opacity: 0.6;
-  }
-  @media only screen and (max-width: 650px) {
-    .trail div {
-      padding: 1rem;
-    }
-  }
-  .active {
-    opacity: 1 !important;
-  }
-  
-  
+}
+

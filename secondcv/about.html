@@ -11,136 +11,91 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/stylesheet.css">
-    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <!-- whatsapp function -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./js/venom-button.min.js"></script>
     <!-- end of whatsapp function -->
 </head>
-<body class="night">
+<body>
     <!-- Scroll to Top Button-->
     <a class="to_top">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+        <i data-feather="chevron-up"></i>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
-        </svg>
+        </svg> -->
     </a>
-    <div class="menu">
+    <!-- theme color change menu [right bottom] -->
+    <div id="theme_menu" class="menu">
         <div class="menu-header">
-            <h2 class="menu-header-title">Theme</h2>
+            <div id="menu-top">
+                <h2 class="menu-header-title">Theme</h2>
+                <span>
+                    <a class="toggle_theme_menu" id="close_btn"><i data-feather="maximize-2"></i></a>
+                </span>
+            </div>
             <div class="theme-switcher">
-            <input type="radio" id="light-theme" name="themes"  />
-            <label for="light-theme">
+                <input type="radio" id="light-theme" name="themes"  />
+                <label for="light-theme">
                 <span>
-                <i data-feather="sun"></i>Light
+                    <i data-feather="sun"></i>Light
                 </span>
-            </label>
-            <input type="radio" id="dark-theme" name="themes" />
-            <label for="dark-theme">
+                </label>
+                <input type="radio" id="dark-theme" name="themes" />
+                <label for="dark-theme">
                 <span>
-                <i data-feather="moon"></i>Dark
+                    <i data-feather="moon"></i>Dark
                 </span>
-            </label>
-            <input type="radio" id="black-theme" name="themes" checked/>
-            <label for="black-theme">
+                </label>
+                <input type="radio" id="black-theme" name="themes" checked />
+                <label for="black-theme">
                 <span>
-                <i data-feather="star"></i>Black
+                    <i data-feather="star"></i>Black
                 </span>
-            </label>
-            <span class="slider"></span>
+                </label>
+                <span class="slider"></span>
             </div>
         </div>
-        <!-- <div class="menu-body">
-            <a href="#"><i data-feather="circle" style="color: #198754;"></i>Green Color Theme</a>
-            <a href="#"><i data-feather="circle" style="color: cyan;"></i>Cyan Color Theme</a>
-            <a href="#"><i data-feather="circle" style="color: rgb(195, 255, 0);"></i>Lemon Color Theme</a>
-            <a href="#"><i data-feather="circle" style="color: rgb(255, 0, 0);"></i>Red Color Theme</a>
-            <a href="#"><i data-feather="info"></i>About</a>
-            <a href="#"><i data-feather="life-buoy"></i>Support</a>
-        </div> -->
+        <div class="menu-body">
+            <a href="#"><i data-feather="circle" style="color: #198754;"></i>Green Text Color</a>
+            <a href="#"><i data-feather="circle" style="color: cyan;"></i>Cyan Text Color</a>
+            <a href="#"><i data-feather="circle" style="color: rgb(255, 255, 255);"></i>White Text Color</a>
+        </div>
     </div>
     <!-- end of the colors nav -->
     <header>
         <div class="container">
             <a href="./index.html" class="logo">
-                <img src="./assets/download.png" height="30px" width="55px" alt="logo">
+                <img src="./assets/90.png" height="40px" alt="logo">
                 <span class="beta">Beta</span>
             </a>
             <nav>
                 <!-- here is the drop down menu for phones only -->
-                <!-- <i class="fas fa-bars toggle-menu"></i> -->
                 <div class="dropdown">
                     <i class="fas fa-bars toggle-menu" onclick="myFunction()"></i>
                     <div id="myDropdown" class="dropdown-content">
                         <a href="./index.html">Home</a>
                         <a href="./about.html">About</a>
-                        <!-- <a href="./experience.html">Experience</a> -->
                         <a href="./my_projects.html">RECENT WORK</a>
                     </div>
                 </div>
                 <!-- end of the drop down menu only for phones -->
                 <ul>
-                    <!-- <li><a><button id="switch">switch</button></a></li> -->
                     <li><a class="active" href="./index.html">HOME</a></li>
                     <li><a href="./about.html">ABOUT</a></li>
-                    <!-- <li><a href="./experience.html">EXPERIENCE</a></li> -->
                     <li><a href="./my_projects.html">RECENTWORK</a></li>
                 </ul>
-                <span class="switch">
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                        <label class="form-check-label" for="flexSwitchCheckChecked"></label>
-                    </div>
-                </span>
             </nav>
         </div>
     </header>
-    <!-- Scroll to Top Button-->
-    <a class="to_top">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
-        </svg>
-    </a>
-    <div class="menu">
-        <div class="menu-header">
-            <h2 class="menu-header-title">Theme</h2>
-            <div class="theme-switcher">
-            <input type="radio" id="light-theme" name="themes"  />
-            <label for="light-theme">
-                <span>
-                <i data-feather="sun"></i>Light
-                </span>
-            </label>
-            <input type="radio" id="dark-theme" name="themes" />
-            <label for="dark-theme">
-                <span>
-                <i data-feather="moon"></i>Dark
-                </span>
-            </label>
-            <input type="radio" id="black-theme" name="themes" checked/>
-            <label for="black-theme">
-                <span>
-                <i data-feather="star"></i>Black
-                </span>
-            </label>
-            <span class="slider"></span>
-            </div>
-        </div>
-        <!-- <div class="menu-body">
-            <a href="#"><i data-feather="circle" style="color: #198754;"></i>Green Color Theme</a>
-            <a href="#"><i data-feather="circle" style="color: cyan;"></i>Cyan Color Theme</a>
-            <a href="#"><i data-feather="circle" style="color: rgb(195, 255, 0);"></i>Lemon Color Theme</a>
-            <a href="#"><i data-feather="circle" style="color: rgb(255, 0, 0);"></i>Red Color Theme</a>
-            <a href="#"><i data-feather="info"></i>About</a>
-            <a href="#"><i data-feather="life-buoy"></i>Support</a>
-        </div> -->
-    </div>
+    <!-- ------------------------------------------------------------------------------------------------------------------ -->
     <section class="personalInfo container">
         <div class="myinfo">
             <div>
                 <div class="aboutMe">
                     <div>
                         <div class="summaryTxtHeader">
-                            <h1>About Me</h1>
+                            <h1 class="changble_color_text">About Me</h1>
                             <h3>Summary Information</h3>
                         </div>
                         <div>
@@ -196,9 +151,9 @@
             <div class="myinfo2">
                 <!-- div num 1 -->
                 <div class="progressSkills">
-                    <div>
+                    <div class="infoGrid">
                         <div>
-                            <h1>My Skills</h1>
+                            <h1 class="changble_color_text">My Skills</h1>
                         </div>
                         <p>Every day i learn, I put new skills here</p>
                         <div class="soft-skills-container">
@@ -233,7 +188,7 @@
                                 </div>
                         </div>
                         <div class="personal-skills">
-                            <h1>Personal Skills</h1>
+                            <h1 class="changble_color_text">Personal Skills</h1>
                             <ul>
                                 <li><span><i class="far fa-dot-circle"></i></span> Fast learner</li>
                                 <li><span><i class="far fa-dot-circle"></i></span> Problem solver</li>
@@ -249,20 +204,20 @@
                 <div class="infoGrid">
                     <div class="info">
                         <div>
-                            <h1>Personal Data</h1>
+                            <h1 class="changble_color_text">Personal Data</h1>
                         </div>
                         <div class="contaPersonal">
-                            <h5>Full Name : </h5>
+                            <h5 class="changble_color_text">Full Name : </h5>
                             <h6>Youssef Mohamed Salah Mohamed</h6>
-                            <h5>Martital Status : </h5>
+                            <h5 class="changble_color_text">Martital Status : </h5>
                             <h6>Single</h6>
-                            <h5>Date of Birth : </h5>
+                            <h5 class="changble_color_text">Date of Birth : </h5>
                             <h6>01/04/1996</h6>
-                            <h5>Military Status : </h5>
+                            <h5 class="changble_color_text">Military Status : </h5>
                             <h6>Exempted</h6>
-                            <h5>Address : </h5>
+                            <h5 class="changble_color_text">Address : </h5>
                             <h6>Nasr-City, Cairo, Egypt</h6>
-                            <h5>Education : </h5>
+                            <h5 class="changble_color_text">Education : </h5>
                             <h6>Petroleum Engineer</h6>
                             <h6>North-Caucasus-Federal-University,Russia</h6>
                             <h6>2017-2023(6years)</h6>
