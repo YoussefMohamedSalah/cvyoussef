@@ -1100,9 +1100,9 @@ span {
 /* media querii */
 /* main page */
 @media (min-width: 769px) {
-  header nav .toggle-menu {
+  /* header nav .toggle-menu {
     display: none;
-  }
+  } */
   .avatar img {
     width: 700px;
   }
