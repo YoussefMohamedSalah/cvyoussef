@@ -16,6 +16,7 @@ body {
     --c-bg-secondary: #000001;
     --c-bg-button: #343844;
     --slider-shadow: inset 0 1px 1px #555;
+    --card-color2: #252323;
 }
 :root.light-theme {
     --c-text-primary: #191919;
@@ -32,7 +33,6 @@ body {
     --c-text-primary: #eee;
     --c-text-secondary: #d3d5db;
     --c-border-primary: #454545;
-    /* --c-bg-primary: #323339; */
     --c-bg-primary: #212534;
     --c-bg-secondary: #222128;
     --c-bg-button: #494a50;
@@ -601,9 +601,9 @@ div {
   height: 1.8em;
   fill: var(--card-color);
 }
-.progressSkills {
+/* .progressSkills {
   width: max-content;
-}
+} */
 .personal-skills ul {
   padding: 0;
   margin: 0;
@@ -849,6 +849,10 @@ h6 {
 .single-project .images-container .images-wrapper {
   max-height: 700px;
   padding: 20px;
+  width: -webkit-fill-available;
+}
+.text-container h2{
+  color: var(--color-green);
 }
 .row-2 {
   display: grid;
@@ -880,14 +884,20 @@ h6 {
   box-shadow: 0 5px 10px var(--card-color);
 }
 .item a img {
-  width: 200px;
+  width: -webkit-fill-available;
 }
 .single-project .images-container .item {
   padding: 3px;
 }
+.images-container h2{
+  color: var(--color-green);
+}
 .text-container {
   padding: 1em;
   border-radius: 1em;
+}
+.text-container h5{
+  color: var(--color-green);
 }
 .text-container {
   text-align: start;
@@ -970,6 +980,9 @@ span {
   flex-direction: row;
   justify-content: space-between;
 }
+.skillUses_flex h3{
+  font-size: 19px;
+}
 .skillUses_flex.down {
   top: 20px;
 }
@@ -1039,14 +1052,6 @@ span {
   cursor: pointer;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav a {
-    font-size: 18px;
-  }
-}
 /* the color circuls */
 #blackandwhite {
   margin-right: 10px;
@@ -1094,12 +1099,17 @@ span {
   border: solid var(--color-green) 1px;
 }
 /* media querii */
-/* main page */
-@media (min-width: 769px) {
+@media (max-width: 1200px) {
+  .summaryImg {
+    width: 257px;
+    height: 237px;
+  }
+}
+/* @media (min-width: 769px) {
   .avatar img {
     width: 700px;
   }
-}
+} */
 @media (max-width: 768px) {
   .container a span{
     display: none;
@@ -1114,8 +1124,11 @@ span {
 }
   header nav ul li a {
     padding: 0px 11px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
+}
+header nav ul {
+  padding-right: 39px;
 }
 .beta {
   padding: 0px 6px;
@@ -1164,17 +1177,41 @@ span {
   .row-2 {
     display: unset;
   }
-}
-@media (max-width: 1200px) {
-  .summaryImg {
-    width: 257px;
-    height: 237px;
+  #single-page-section{
+    padding-top: 0px;
+    padding-bottom: 15px;
   }
+  .single-project {
+    margin-top: 6vh;
 }
+.single-project .container {
+  width: 84%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.backProject {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 0 7rem;
+}
+header .container::after {
+  width: calc(100% - 118px);
+  margin-left: 44px;
+}
+#logoImg {
+  padding-left: 48px;
+  height: 38px;
+}
+}
+
 @media (max-width: 576px) {
   .soft-skills-container {
     padding: 0px;
-  }
+}
+  .skills{
+    display: flex;
+    flex-wrap: wrap;
+}
   .profilePic {
     display: none;
   }
@@ -1225,72 +1262,184 @@ span {
   }
 }
 
-@media (max-width: 450px) {
-  .soft-skills-container {
-    padding: 0px;
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
   }
-  .profilePic {
-    display: none;
-  }
-  .avatar img {
-    width: 250px;
-  }
-  .single-project .images-container {
-    margin: 0px;
-  }
-  #typeWrite {
-    font-size: 19px;
-  }
-  .popup.active {
-    left: 13%;
-    width: 347px;
-    height: 169px;
-    font-size: 19px;
-  }
-  .popup h3 {
-    font-size: 14px;
-    margin: 10px;
-  }
-  .close {
-    top: 6px;
-    right: 17px;
-  }
-  #logoImg{
-    height: 33px;
-  }
-}
-@media (max-width: 420px) {
-  .soft-skills-container {
-    padding: 0px;
-  }
-  .profilePic {
-    display: none;
-  }
-  #typeWrite {
+  .sidenav a {
     font-size: 18px;
   }
-  .popup.active {
-    left: 3%;
-    width: 346px;
-    height: 139px;
-    font-size: 8px;
-  }
-  .popup h3 {
-    font-size: 14px;
-    margin: 10px;
-  }
-  .close {
-    top: 4px;
-    right: 14px;
-  }
-  #logoImg{
-    height: 25px;
-  }
 }
-@media (max-width: 350px) {
+
+@media (max-width: 426px) {
+#logoImg {
+    padding-left: 37px;
+    height: 30px;
+}
+.profilePic {
+  display: block;
+}
+header .container::after {
+  width: calc(100% - 84px);
+  margin-left: 30px;
+}
+header nav ul {
+  padding-right: 15px;
+}
+  .container a span{
+    display: none;
+  }
+  .recent-work h1{
+    font-size: 33px;
+    margin: 15px 0 9px;
+  }
+  .text-left {
+    text-align: left!important;
+    padding-left: 60px;
+}
+  header nav ul li a {
+    padding: 0px 11px;
+    font-size: 11px;
+    font-weight: 400;
+}
+.beta {
+  padding: 0px 6px;
+  margin-left: 2px;
+  border-radius: 11px;
+}
+.myinfo{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  margin: 0px 0px 0px 30px;
+}
+.infoGrid {
+  padding-left: 0px;
+  width: fit-content;
+}
+.contaPersonal h5{
+  font-size: 18px;
+}
+.contaPersonal {
+  margin-top: 10px;
+}
+.contaPersonal h6{
+  font-size: 13px;
+}
+  .profilePic {
+    width: inherit;
+  }
+  .summaryImg {
+    width: 300px;
+    height: 250px;
+}
+  .form-check {
+    position: absolute;
+    right: 50px;
+    top: 18px;
+  }
+  .avatar img {
+    width: 400px;
+  }
+  .summaryInfoList li p {
+    font-size: 13px;
+  }
+  .summaryTxtHeader h1 {
+    font-size: 22px;
+  }
+  .summaryTxtHeader h3 {
+    font-size: 22px;
+  }
+  .aboutMeTxt {
+    font-size: 11px;
+  }
+  .summaryInfoList li p {
+    font-size: 9px;
+  }
+  .myinfo h1 {
+    font-size: 22px;
+}
+.personal-skills ul {
+  left: 0px;
+}
+.personal-skills ul li{
+  font-size: 12px;
+}
+.skills {
+  flex-grow: 0;
+  max-width: 100%;
+  flex-basis: 100%;
+}
+.personal--data{
+  width: -webkit-fill-available;
+  padding: 0px 0px 20px 0px;
+}
+.soft-skills-container {
+  width: calc(100% - 30px);
+}
+  .myinfo2 {
+    flex-wrap: wrap;
+  }
+  .row-2 {
+    display: unset;
+  }
+  .backProject {
+    margin: 0 5rem;
+}
+.night h2 {
+  font-size: 16px;
+}
+.text-container h6 {
+  font-size: 9px;
+}
+.night h5 {
+  font-size: 13px;
+}
+.night h3{
+    font-weight: 400;
+    font-size: 9px;
+    margin: 0 0 4px;
+    line-height: 1.2;
+}
+.night p {
+  font-size: 8px;
+}
+}
+
+
+
+@media (max-width: 376px) {
+  .myinfo {
+    margin: 0px 0px 0px 15px;
+}
   .soft-skills-container {
     padding: 0px;
+    width: 1005;
   }
+  .soft-skills-card {
+    width: 9.5em;
+    padding: 0.6em;
+    height: 4em;
+    margin: 0.5em;
+}
+.personal-skills {
+  padding-top: 7px;
+  margin: 1rem 0 2rem;
+}
+.personal-skills ul li {
+  font-size: 12px;
+}
+.progressSkills span {
+  padding-right: 3px;
+}
+.contaPersonal h5 {
+  font-size: 16px;
+}
+.contaPersonal h6 {
+  font-size: 14px;
+}
   .profilePic {
     display: none;
   }
@@ -1308,29 +1457,36 @@ span {
     padding-left: 12px;
   }
   .aboutMe {
-    padding: 0px;
+    padding: 8px;
   }
+  .profilePic {
+    display: block;
+}
+.summaryImg {
+  width: 187px;
+  height: 155px;
+}
   .night h6 {
     font-size: 13px;
     padding-left: 20px;
   }
   .summaryTxtHeader h1 {
-    font-size: 17px;
+    font-size: 20px;
   }
   .myinfo2 h1 {
     font-size: 17px;
   }
   .soft-skills-card span {
-    font-size: 12px;
+    font-size: 8px;
   }
   .summaryTxtHeader h3 {
-    font-size: 9px;
+    font-size: 15px;
   }
   .aboutMeTxt {
-    font-size: 7px;
+    font-size: 10px;
   }
   .summaryInfoList li p {
-    font-size: 8px;
+    font-size: 10px;
   }
   .infoGrid {
     padding-left: 0px;
@@ -1342,33 +1498,168 @@ span {
   .personal-skills {
     padding-top: 20px;
   }
-  .summaryImg {
-    width: 150px;
-    height: 156px;
+  .recent-work h1 {
+    font-size: 26px;
+    margin: 15px 0 9px;
+}
+.text-left {
+  text-align: left!important;
+  padding-left: 38px;
+}
+header nav ul li a {
+  padding: 0px 9px;
+  font-size: 10px;
+  font-weight: 400;
+}
+.avatar img {
+  width: 366px;
+}
+.contacts-2 ul{
+  padding-inline-start: 0px;
+  font-size: 13px;
+}
+.my_name h2{
+  font-size: 22px;
+}
+.explore-btn{
+    margin-right: 18px;
   }
-  #typeWrite {
-    font-size: 18px;
+  .night h2 {
+    font-size: 13px;
   }
-  .popup.active {
-    left: 3%;
-    width: 346px;
-    height: 139px;
+  .text-container h6 {
+    font-size: 7px;
+    padding-left: 0px;
+  }
+  .night h5 {
+    font-size: 11px;
+    padding-left: 0px;
+  }
+  .single-project .images-container{
+    padding: 0px;
+    padding-top: 3px;
+  }
+  .night h3{
+      font-weight: 400;
+      font-size: 9px;
+      margin: 0 0 4px;
+      line-height: 1.2;
+  }
+  .night p {
     font-size: 8px;
   }
-  .popup h3 {
-    font-size: 12px;
-    margin: 8px;
-  }
-  .popup h2 {
-    font-size: 20px;
-  }
-  .close {
-    top: 4px;
-    right: 13px;
-  }
-  #logoImg{
-    height: 24px;
-  }
+}
+
+@media (max-width: 321px) {
+  .avatar img {
+    width: 300px;
+}
+header nav ul li a {
+  padding: 0px 6px;
+  font-size: 9px;
+  font-weight: 300;
+}
+header .container::after {
+  width: calc(100% - 50px);
+  margin-left: 15px;
+}
+header nav ul {
+  padding-right: 10px;
+}
+#logoImg {
+  padding-left: 22px;
+  height: 29px;
+}
+.contacts-2 ul {
+  padding-inline-start: 0px;
+  font-size: 12px;
+}
+.main-btn {
+  padding: 13px 22px;
+  font-size: 14px;
+}
+.summaryTxtHeader h1 {
+  font-size: 18px;
+}
+.summaryTxtHeader h3 {
+  font-size: 14px;
+  margin: 0 0 8px;
+}
+.aboutMeTxt {
+  font-size: 10px;
+}
+.summaryInfoList li p {
+  font-size: 9px;
+}
+.summaryImg {
+  width: 183px;
+  height: 141px;
+}
+.soft-skills-card {
+  width: 72px;
+  padding: 0.5em;
+  height: 3.6em;
+  margin: 0.5em;
+}
+.soft-skills-card span {
+  font-size: 7px;
+}
+.progressSkills p {
+  font-size: 12px;
+  font-weight: 400;
+  margin: -7px 0 8px;
+}
+.myinfo h1 {
+  font-size: 19px;
+  margin: 0 0 8px;
+}
+.contaPersonal h5 {
+  font-size: 15px;
+}
+.contaPersonal h6 {
+  font-size: 12px;
+}
+.recent-work h1 {
+  font-size: 22px;
+  margin: 11px 0 6px;
+}
+.magic_card_container {
+  text-align: center;
+  padding: 15px;
+}
+.text-left {
+  padding-left: 11px;
+}
+.night h2 {
+  font-size: 13px;
+}
+.text-container h6 {
+  font-size: 7px;
+  padding-left: 0px;
+}
+.night h5 {
+  font-size: 10px;
+  padding-left: 0px;
+}
+.single-project .images-container{
+  padding: 0px;
+  padding-top: 3px;
+}
+.night h3{
+    font-weight: 400;
+    font-size: 9px;
+    margin: 0 0 4px;
+    line-height: 1.2;
+}
+.night p {
+  font-size: 7px;
+}
+.mt--5 span{
+  font-size: 7px;
+}
+.item a img {
+  width: 80px;
+}
 }
 
 /* The container <div> - needed to position the dropdown content */
