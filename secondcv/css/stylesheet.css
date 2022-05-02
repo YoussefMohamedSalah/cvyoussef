@@ -1411,6 +1411,20 @@ header nav ul {
 
 
 @media (max-width: 376px) {
+  header .container::after {
+    width: calc(100% - 27px);
+    margin-left: 4px;
+}
+#logoImg {
+  padding-left: 6px;
+  height: 28px;
+}
+header nav ul {
+  padding-right: 0px;
+}
+.container.logo{
+  padding-right: 1px;
+}
   .myinfo {
     margin: 0px 0px 0px 15px;
 }
@@ -1563,7 +1577,7 @@ header nav ul li a {
   }
 }
 
-@media (max-width: 321px) {
+@media (max-width: 341px) {
   .avatar img {
     width: 300px;
 }
@@ -1577,7 +1591,7 @@ header .container::after {
   margin-left: 5px;
 }
 header nav ul {
-  padding-right: 0px;
+  padding-right: 2px;
 }
 #logoImg {
   padding-left: 13px;
