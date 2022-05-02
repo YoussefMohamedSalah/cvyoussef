@@ -623,7 +623,7 @@ div {
 .infoGrid {
   margin: 0;
   box-sizing: border-box;
-  width: 50%;
+  /* width: 50%; */
 }
 .personalInfo.info {
   margin-left: 56px;
