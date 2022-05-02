@@ -1240,6 +1240,9 @@ span {
     top: 6px;
     right: 17px;
   }
+  #logoImg{
+    height: 33px;
+  }
 }
 @media (max-width: 420px) {
   .soft-skills-container {
@@ -1257,9 +1260,6 @@ span {
     height: 139px;
     font-size: 8px;
   }
-  /* .tobe.active{
-        font-size: 18px;
-    } */
   .popup h3 {
     font-size: 14px;
     margin: 10px;
@@ -1267,6 +1267,9 @@ span {
   .close {
     top: 4px;
     right: 14px;
+  }
+  #logoImg{
+    height: 25px;
   }
 }
 @media (max-width: 350px) {
@@ -1349,6 +1352,9 @@ span {
     top: 4px;
     right: 13px;
   }
+  #logoImg{
+    height: 24px;
+  }
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -1417,7 +1423,6 @@ span {
     right: 100px;
     max-width: 320px;
     background-color: var(--c-bg-primary);
-    /* transition: background-color 0.15s ease; */
     border-radius: 10px 10px 0 0;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.05), 0 -4px 16px rgba(0, 0, 0, 0.1);
     z-index: 9000;
@@ -1431,12 +1436,6 @@ span {
   transition: 0.7s;
 }
 /* open and close theme menu  */
-/* .menu_activated{
-  display: block;
-}
-.menu_activated{
-  display: none;
-} */
 
 #menu-top{
   display: flex;
@@ -1554,15 +1553,6 @@ span {
   initial-value: 132deg;
   inherits: false;
 }
-/* .cards_container {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-around;
-  box-sizing: border-box;
-  padding: 30px 0px 30px 0px;
-  flex-wrap: wrap;
-} */
 .cards_container {
   display: flex;
   justify-content: center;
@@ -1574,11 +1564,6 @@ span {
   background-repeat: no-repeat;
 }
 .magic_card_container{
-  /* flex-grow: 0;
-  max-width: 33.333333%;
-  flex-basis: 33.333333%;
-  display: block;
-  text-align: center; */
   text-align: center;
   padding: 30px;
 }
