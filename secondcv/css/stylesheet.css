@@ -1418,8 +1418,18 @@ header nav ul {
     padding: 0px;
     width: 1005;
   }
+  header .container::after {
+    width: calc(100% - 46px);
+    margin-left: 12px;
+}
+#logoImg {
+  padding-left: 15px;
+}
+header nav ul {
+  padding-right: 0px;
+}
   .soft-skills-card {
-    width: 9.5em;
+    width: 11.5em;
     padding: 0.6em;
     height: 4em;
     margin: 0.5em;
@@ -1504,7 +1514,10 @@ header nav ul {
 }
 .text-left {
   text-align: left!important;
-  padding-left: 38px;
+  padding-left: 8px;
+}
+.item a img {
+  width: 80px;
 }
 header nav ul li a {
   padding: 0px 9px;
@@ -1560,14 +1573,14 @@ header nav ul li a {
   font-weight: 300;
 }
 header .container::after {
-  width: calc(100% - 50px);
-  margin-left: 15px;
+  width: calc(100% - 37px);
+  margin-left: 5px;
 }
 header nav ul {
-  padding-right: 10px;
+  padding-right: 0px;
 }
 #logoImg {
-  padding-left: 22px;
+  padding-left: 13px;
   height: 29px;
 }
 .contacts-2 ul {
@@ -1596,8 +1609,8 @@ header nav ul {
   height: 141px;
 }
 .soft-skills-card {
-  width: 72px;
-  padding: 0.5em;
+  width: 68px;
+  padding: 0.4em;
   height: 3.6em;
   margin: 0.5em;
 }
