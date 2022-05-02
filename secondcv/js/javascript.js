@@ -276,5 +276,15 @@ const touchSlide = (() => {
     // call mobile on touch end
     slider.addEventListener("touchend", mobile)
 })()
-// -----------
+// -----------Local storage---------------------
+// ------------------our main colors in edit theme section-------------
+// let lightTheme = document.querySelector("#light-theme");
+// let darkTheme = document.querySelector("#dark-theme");
+// let blackTheme = document.querySelector("#black-theme");
+// let greenFont = document.querySelector("#green-font-color");
+// let cyanFont = document.querySelector("#cyan-font-color");
+// let whiteFont = document.querySelector("#white-font-color");
+// --------------------------
+
+
 
