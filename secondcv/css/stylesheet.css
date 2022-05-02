@@ -389,9 +389,9 @@ header nav ul li a span:hover {
 .progressSkills span {
   text-align: start;
 }
-.personal-skills ul li {
+/* .personal-skills ul li {
   text-align: start;
-}
+} */
 .personal-skills{
   margin: 1rem 0 4rem;    
 }
@@ -543,7 +543,7 @@ ul {
 .summaryImg {
   position: relative;
   width: 370px;
-  height: 418px;
+  height: 350px;
   overflow: hidden;
   box-shadow: -2px 2px 8px 0px rgb(229 228 228);
   margin: 0 auto;
@@ -614,10 +614,6 @@ div {
   font-size: 14px;
   margin: 0.2rem;
   left: 14px;
-}
-.personal-skills ul li {
-  left: -18px;
-  top: 0;
 }
 .contaPersonal {
   text-align: left;
@@ -1100,20 +1096,42 @@ span {
 /* media querii */
 /* main page */
 @media (min-width: 769px) {
-  /* header nav .toggle-menu {
-    display: none;
-  } */
   .avatar img {
     width: 700px;
   }
 }
 @media (max-width: 768px) {
+  .container a span{
+    display: none;
+  }
+  .recent-work h1{
+    font-size: 33px;
+    margin: 15px 0 9px;
+  }
+  .text-left {
+    text-align: left!important;
+    padding-left: 60px;
+}
+  header nav ul li a {
+    padding: 0px 11px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.beta {
+  padding: 0px 6px;
+  margin-left: 2px;
+  border-radius: 11px;
+}
+.myinfo{
+  flex-wrap: wrap;
+}
   .profilePic {
-    display: none;
+    width: inherit;
   }
-  header nav ul {
-    display: none;
-  }
+  .summaryImg {
+    width: 300px;
+    height: 250px;
+}
   .form-check {
     position: absolute;
     right: 50px;
@@ -1121,10 +1139,6 @@ span {
   }
   .avatar img {
     width: 400px;
-  }
-  .summaryImg {
-    width: 300px;
-    height: 396px;
   }
   .summaryInfoList li p {
     font-size: 13px;
@@ -1153,7 +1167,8 @@ span {
 }
 @media (max-width: 1200px) {
   .summaryImg {
-    display: none;
+    width: 257px;
+    height: 237px;
   }
 }
 @media (max-width: 576px) {
@@ -1328,7 +1343,6 @@ span {
     padding-top: 20px;
   }
   .summaryImg {
-    display: none;
     width: 150px;
     height: 156px;
   }
